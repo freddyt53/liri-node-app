@@ -7,7 +7,7 @@ var keys = require("./keys.js");
 
 //moment js
 var moment = require('moment');
-moment().format();
+// moment().format();
 
 //spotify keys
 var spotify = new Spotify(keys.spotify);
@@ -22,9 +22,8 @@ function concertThis(bandQuery) {
 
     // Then run a request to the OMDB API with the movie specified
     var queryUrl = "https://rest.bandsintown.com/artists/" + bandQuery + "/events?app_id=codingbootcamp#";
-    // + movieQuery +
     // This line is just to help us debug against the actual URL.
-    console.log(queryUrl);
+    // console.log(queryUrl);
 
     request(queryUrl, function (error, response, body) {
 
@@ -34,16 +33,15 @@ function concertThis(bandQuery) {
             var concertData = JSON.parse(body);
 
 
-            console.log(concertData);
             for (i = 0; i < concertData.length && i < 5; i++) {
 
                 var momentDT = moment(concertData[i].datetime).format('L');
-                console.log(concertData);
-                // console.log("===============================");
-                // console.log("Venue Name : " + concertData[i].venue.name +
-                //     "\nVenue Location: " + concertData[i].venue.city + "," + concertData[i].venue.country +
-                //     "\nDate of the Event: " + momentDT +
-                //     "\n===============================");
+                // console.log(concertData);
+                console.log("===============================");
+                console.log("Venue Name : " + concertData[i].venue.name +
+                    "\nVenue Location: " + concertData[i].venue.city + "," + concertData[i].venue.country +
+                    "\nDate of the Event: " + momentDT +
+                    "\n===============================");
             }
         };
     });
@@ -52,7 +50,7 @@ function concertThis(bandQuery) {
 function spotifyThis(musicSearch) {
 
     //  * If no song is provided then your program will default to "The Sign" by Ace of Base.
-    if (musicSearch === undefined || null) {
+    if (musicSearch === undefined) {
         musicSearch = "The Sign Ace of Base";
     }
 
@@ -62,7 +60,7 @@ function spotifyThis(musicSearch) {
         }
 
         else {
-            for (i = 0; i < data.tracks.items.length && i < 5; i++) {
+            for (i = 0; i < data.tracks.items.length && i < 1; i++) {
 
                 var musicQuery = data.tracks.items[i];
                 // console.log(musicQuery);
@@ -71,6 +69,7 @@ function spotifyThis(musicSearch) {
                     "\nSong Name: " + musicQuery.name +
                     "\nLink to Song: " + musicQuery.external_urls.spotify +
                     "\nAlbum Name: " + musicQuery.album.name +
+
                     "\n===============================");
             }
         };
@@ -97,6 +96,7 @@ function movieThis(movieQuery) {
         if (!error && response.statusCode === 200) {
             // JSON.parse for legibility
             var movieData = JSON.parse(body);
+
             //  console.log(movieData);                  
             console.log("===============================");
             console.log("Movie Title: " + movieData.Title +
