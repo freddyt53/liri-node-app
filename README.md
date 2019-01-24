@@ -3,7 +3,7 @@
 This app allows you to search Spotify for songs, Bands In Town for concerts and OMBD for movies.
 
 # How to use
-* Use node liri.js then run one of the following comands with the search parameters:
+Use node liri.js then run one of the following comands with the search parameters:
 
 * concert-this '(artist/band name)'
 * spotify-this-song '(song name)'
