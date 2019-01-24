@@ -37,7 +37,7 @@ Use node liri.js then run one of the following comands with the search parameter
 * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.
 
 # When do-what-it-says command:
-* A random.txt file with search for spotify-this-song "I want it that way." This will give you the spotify results of "I want it that way."
+* Will read a file named random.txt that has a spotify-this-song command in it. This will give you the spotify results of "I want it that way."
 
 # Technologies Used
 * JavaScript
