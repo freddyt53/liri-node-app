@@ -22,7 +22,7 @@ function concertThis(bandQuery) {
 
     // Then run a request to the OMDB API with the movie specified
     var queryUrl = "https://rest.bandsintown.com/artists/" + bandQuery + "/events?app_id=codingbootcamp#";
-    // This line is just to help us debug against the actual URL.
+
     // console.log(queryUrl);
 
     request(queryUrl, function (error, response, body) {
@@ -46,10 +46,10 @@ function concertThis(bandQuery) {
         };
     });
 }
-//     * `spotify-this-song`
+//spotify-this-song
 function spotifyThis(musicSearch) {
 
-    //  * If no song is provided then your program will default to "The Sign" by Ace of Base.
+    //If no song is provided then it will default to "The Sign" by Ace of Base.
     if (musicSearch === undefined) {
         musicSearch = "The Sign Ace of Base";
     }
@@ -77,24 +77,24 @@ function spotifyThis(musicSearch) {
 }
 
 
-// * `movie-this`
+//movie-this
 function movieThis(movieQuery) {
 
-    // * If the user doesn't type a movie in, the program will output data for the movie 'Mr.Nobody.'
-    if (movieQuery === undefined || null) {
+    //If the user doesn't type a movie in, it will default to the movie 'Mr.Nobody.'
+    if (movieQuery === undefined) {
         movieQuery = "Mr.Nobody";
     }
 
-    // Then run a request to the OMDB API with the movie specified
+    //Then run a request to the OMDB API with the movie specified
     var queryUrl = "http://www.omdbapi.com/?t=" + movieQuery + "&y=&plot=short&apikey=trilogy";
 
     // console.log(queryUrl);
 
     request(queryUrl, function (error, response, body) {
 
-        // If the request is successful
+        //If the request is successful
         if (!error && response.statusCode === 200) {
-            // JSON.parse for legibility
+
             var movieData = JSON.parse(body);
 
             //  console.log(movieData);                  
@@ -112,8 +112,8 @@ function movieThis(movieQuery) {
     });
 }
 
-// Switch for commands for all functions
-var ask = function (commands, Data) {
+//Switch for commands for all functions
+var userInput = function (commands, Data) {
     switch (commands) {
         case "concert-this":
             concertThis(Data);
@@ -132,22 +132,22 @@ var ask = function (commands, Data) {
     }
 };
 
-//Do what it says reads text from random.txt file, command is ran
+//Do what it says reads text from random.txt file and runs the command with in it
 var doWhatItSays = function () {
     fs.readFile("random.txt", "utf8", function (err, data) {
         if (err) throw err;
         var randomText = data.split(",");
 
         if (randomText.length == 2) {
-            ask(randomText[0], randomText[1]);
+            userInput(randomText[0], randomText[1]);
         }
         else if (randomText.length == 1) {
-            ask(randomText[0]);
+            userInput(randomText[0]);
         }
     });
 }
-// asigns args to ask for switch case
-ask(command, input);
+//asigns args to ask for switch case
+userInput(command, input);
 
 
 
