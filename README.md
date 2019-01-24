@@ -1,6 +1,6 @@
 # Liri-node-app
 
-** This app allows you to search Spotify for songs, Bands In Town for concerts and OMBD for movies.**
+This app allows you to search Spotify for songs, Bands In Town for concerts and OMBD for movies.
 
 # How to use
 * Use node liri.js then run one of the following comands with the search parameters:
@@ -14,7 +14,7 @@
 * Example: node liri.js movie-this "deadpool"
 
 # When concert-this command is used you will be provided with:
-* Name of the venue
+* Venue Name
 * Venue location
 * Date of the Event
 
@@ -25,21 +25,21 @@
 * The album name
 * If no song is provided then your program will default to "The Sign" by Ace of Base.
 
-#When movie-this command is used you will be provided with:
-* Title of the movie.
+# When movie-this command is used you will be provided with:
+* Movie Title.
 * Year the movie came out.
-* IMDB Rating of the movie.
-* Rotten Tomatoes Rating of the movie.
+* IMDB Rating.
+* Rotten Tomatoes.
 * Country where the movie was produced.
 * Language of the movie.
 * Plot of the movie.
 * Actors in the movie.
 * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.
 
-#When do-what-it-says command:
+# When do-what-it-says command:
 * A random.txt file with search for spotify-this-song "I want it that way." This will give you the spotify results of "I want it that way."
 
-#Technologies Used
+# Technologies Used
 * JavaScript
 * Node.js
 * Spotify API
