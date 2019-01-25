@@ -1,8 +1,7 @@
 # Liri-node-app
 
 This app allows you to search Spotify for songs, Bands In Town for concerts and OMBD for movies.
-For a short walk thru video click here: https://drive.google.com/open?id=1hsVpp46Miqv-QcqNZyP8tcqmJVreuJK_
-
+For a short walk thru video click here:https://drive.google.com/file/d/1hsVpp46Miqv-QcqNZyP8tcqmJVreuJK_/view?usp=sharing
 # How to use
 Use node liri.js then run one of the following comands with the search parameters:
 
