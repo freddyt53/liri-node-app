@@ -23,7 +23,7 @@ Use node liri.js then run one of the following comands with the search parameter
 * The song's name
 * A link to the song in Spotify
 * The album name
-* If no song is provided then your program will default to "The Sign" by Ace of Base.
+* If no song is provided the program will default to "The Sign" by Ace of Base.
 
 # When movie-this command is used you will be provided with:
 * Movie Title.
@@ -34,7 +34,7 @@ Use node liri.js then run one of the following comands with the search parameter
 * Language of the movie.
 * Plot of the movie.
 * Actors in the movie.
-* If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.
+* If no movie is provided the program will default to the movie "Mr Nobody".
 
 # When do-what-it-says command:
 * Will read a file named random.txt that has a spotify-this-song command in it. This will give you the spotify results of "I want it that way."
