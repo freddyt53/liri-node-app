@@ -7,9 +7,9 @@ var keys = require("./keys.js");
 
 //moment js
 var moment = require('moment');
-// moment().format();
 
-//spotify keys
+
+//spotify key
 var spotify = new Spotify(keys.spotify);
 
 //variable for input
@@ -46,6 +46,7 @@ function concertThis(bandQuery) {
         };
     });
 }
+
 //spotify-this-song
 function spotifyThis(musicSearch) {
 
@@ -67,7 +68,7 @@ function spotifyThis(musicSearch) {
                 console.log("===============================");
                 console.log("Artist: " + musicQuery.artists[0].name +
                     "\nSong Name: " + musicQuery.name +
-                    "\nLink to Song: " + musicQuery.external_urls.spotify +
+                    "\nLink to Song: " + musicQuery.preview_url +
                     "\nAlbum Name: " + musicQuery.album.name +
 
                     "\n===============================");
@@ -75,7 +76,6 @@ function spotifyThis(musicSearch) {
         };
     });
 }
-
 
 //movie-this
 function movieThis(movieQuery) {
@@ -146,6 +146,7 @@ var doWhatItSays = function () {
         }
     });
 }
+
 //asigns args to ask for switch case
 userInput(command, input);
 
